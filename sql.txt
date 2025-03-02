@@ -1,0 +1,19 @@
+CREATE DATABASE competition_web;
+
+USE competition_web;
+
+CREATE TABLE warning
+(
+    id     INT  PRIMARY KEY AUTO_INCREMENT, -- 主键，自增
+    date   DATETIME     NOT NULL,          -- 日期时间类型，不能为空
+    name   VARCHAR(255) NOT NULL,          -- 名称，字符串类型，最大长度255，不能为空
+    reason VARCHAR(255)                    -- 原因，字符串类型，最大长度255，可以为空
+);
+
+INSERT INTO warning (date, name, reason)
+VALUES ('2025-2-10 12:34:56', '故障1', '原因1'),
+       ('2025-2-15 09:15:00', '故障2', '原因2'),
+       ('2025-2-26 14:20:00', '故障3', '原因3'),
+       ('2025-2-11 12:34:56', '故障4', '原因4'),
+       ('2025-2-20 09:15:00', '故障5', '原因5'),
+       ('2025-2-20 14:20:00', '故障6', '原因6');
